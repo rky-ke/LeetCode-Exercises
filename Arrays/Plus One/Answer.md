@@ -21,10 +21,10 @@ flowchart TD
     start[Start with digits array]
     init[Set i to last index]
     checkIndex{Is i >= 0?}
-    checkDigit{Is digits[i] < 9?}
-    inc[Increment digits[i]]
+    checkDigit{Is current digit < 9?}
+    inc[Increment current digit]
     returnDigits[Return digits]
-    setZero[Set digits[i] = 0]
+    setZero[Set current digit to 0]
     dec[Decrement i]
     prependOne[Prepend 1 to digits]
 
