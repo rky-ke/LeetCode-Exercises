@@ -102,3 +102,15 @@ Thus, the result should be `[1,0]`.
 - Maximum length input (`length = 100`)
 
 ---
+
+## ▶️ How to Run All Test Cases (PHP)
+
+From the repository root, run:
+
+```bash
+php "Arrays/Plus One/test_plus_one.php"
+```
+
+This runs a set of normal and edge test cases and prints `PASS`/`FAIL` for each case plus a final summary.
+
+---
