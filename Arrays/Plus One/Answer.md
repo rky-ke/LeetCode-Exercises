@@ -14,6 +14,32 @@ The solution processes the `digits` array from right to left, just like manual a
 
 This makes the solution efficient because it exits early for common cases where the last digit is not `9`.
 
+## Flowchart
+
+```mermaid
+flowchart TD
+    start[Start with digits array]
+    init[Set i to last index]
+    checkIndex{Is i >= 0?}
+    checkDigit{Is digits[i] < 9?}
+    inc[Increment digits[i]]
+    returnDigits[Return digits]
+    setZero[Set digits[i] = 0]
+    dec[Decrement i]
+    prependOne[Prepend 1 to digits]
+
+    start --> init
+    init --> checkIndex
+    checkIndex -->|Yes| checkDigit
+    checkDigit -->|Yes| inc
+    inc --> returnDigits
+    checkDigit -->|No| setZero
+    setZero --> dec
+    dec --> checkIndex
+    checkIndex -->|No| prependOne
+    prependOne --> returnDigits
+```
+
 ## Time Complexity Choice
 
 - **Time Complexity:** `O(n)` in the worst case, where `n` is the number of digits.
