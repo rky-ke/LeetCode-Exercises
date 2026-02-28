@@ -51,6 +51,15 @@ flowchart TD
   - Worst case happens when all digits are `9`, so the algorithm touches every element.
   - For many inputs, it returns earlier (for example `[1,2,3]`), but Big-O remains `O(n)`.
 
+## Loop Iteration Cases
+
+- **Best Case:** `1` iteration.
+  - Happens when the last digit is less than `9` (example: `[1,2,3]`).
+- **Worst Case:** `n` iterations, where `n = digits.length`.
+  - Happens when all digits are `9` (example: `[9,9,9]`).
+- **General Case:** `k + 1` iterations.
+  - `k` is the number of trailing `9`s (example: `[1,2,9,9]` has `k = 2`, so iterations = `3`).
+
 - **Space Complexity:** `O(1)` auxiliary space.
   - The algorithm updates the input array in place.
   - The only structural growth is when all digits are `9`, where one extra digit is added to the result.
