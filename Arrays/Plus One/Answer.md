@@ -14,6 +14,11 @@ The solution processes the `digits` array from right to left, just like manual a
 
 This makes the solution efficient because it exits early for common cases where the last digit is not `9`.
 
+## Algorithm Type
+
+- **Type:** Iterative digit traversal with carry propagation (simulation of elementary addition).
+- **Why this fits:** The method mimics manual addition from right to left, propagating carry through trailing `9`s until no carry remains.
+
 ## Flowchart
 
 ```mermaid
